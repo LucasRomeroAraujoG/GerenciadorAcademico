@@ -1,36 +1,61 @@
-import java.io.IOException;
 import java.util.Scanner;
- 
-/**
- * IMPORTANT: 
- *      O nome da classe deve ser "Main" para que a sua solução execute
- *      Class name must be "Main" for your solution to execute
- *      El nombre de la clase debe ser "Main" para que su solución ejecutar
- */
-public class GerenciadorAcademico {
- 
-    public static void main(String[] args) throws IOException {
- Scanner sc = new Scanner(System.in);
-double vetorA[];
-vetorA = new double [100];
 
-for(int armazenarValores = 0;armazenarValores < 100;armazenarValores++){
-vetorA[armazenarValores] = sc.nextDouble();
-}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-for(int pos = 0;pos < 100;pos++){
-    if(vetorA[pos] <= 10){
-        System.out.printf("A[%d] = %.2f\n", pos, vetorA[pos]);
+        boolean menu = true;
+
+        while (menu) {
+            //Menu do projeto
+            System.out.println("1) Alunos");
+            System.out.println("2) Cursos");
+            System.out.println("3) Matrículas");
+            System.out.println("4) Notas");
+            System.out.println("5) Relatórios");
+            System.out.println("0) Sair");
+
+            //Validações das entradas, para que seja possível APENAS números entre 0, 5
+
+            int opcaoMenu;
+
+            while (true) {
+                System.out.print("Escolha uma opção: ");
+
+                if (sc.hasNextInt()) {
+                    opcaoMenu = sc.nextInt();
+
+                    if (opcaoMenu >= 0 && opcaoMenu <= 5) {
+                        break;
+                    }
+                } else {
+                    sc.next();
+                }
+
+                System.out.println("Opção inválida! Tente novamente.");
+            }
+
+            //Início das opções
+
+            switch (opcaoMenu) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                default:
+                    System.out.println("O programa será encerrado... aguarde!");
+                    menu = false;
+                    break;
+
+            }
+        }
+        System.out.println("Programa encerrado com sucesso!");
+        sc.close();
     }
-}
-
-System.out.println("Impressao com for each");
-
-for(double elemento: vetorA){
-    System.out.printf(elemento);
-}
- 
- sc.close();
-    }
- 
 }
