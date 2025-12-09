@@ -1,0 +1,13 @@
+### IntelliJ IDEA ###
+.idea/
+*.iml
+out/
+
+### Compiled Java ###
+*.class
+
+### macOS ###
+.DS_Store
+
+### Windows ###
+Thumbs.db
